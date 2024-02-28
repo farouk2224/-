@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحريك النص وتغيير الألوان</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            animation: changeBackground 5s infinite;
+        }
+
+        h1 {
+            font-size: 3em;
+            position: relative;
+            z-index: 1;
+            animation: moveWave 2s infinite linear;
+        }
+
+        @keyframes moveWave {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes changeBackground {
+            0% {
+                background: linear-gradient(to right, #3498db, #2ecc71);
+            }
+            25% {
+                background: linear-gradient(to right, #2ecc71, #f39c12);
+            }
+            50% {
+                background: linear-gradient(to right, #f39c12, #e74c3c);
+            }
+            75% {
+                background: linear-gradient(to right, #e74c3c, #3498db);
+            }
+            100% {
+                background: linear-gradient(to right, #3498db, #2ecc71);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>M.E.T</h1>
+</body>
+</html>
